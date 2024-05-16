@@ -1,18 +1,18 @@
 import React from 'react'
-import '../index.css'
-import { FaPenAlt, FaUserEdit } from 'react-icons/fa';
+import styles from './Table.module.css'
+import { FaUserEdit } from 'react-icons/fa';
 import { MdDeleteSweep } from 'react-icons/md';
 
 const Table = (props) => {
     const { data, error } = props;
     console.log(data);
     return (
-        <div className='tablewrapper'>
+        <div className={styles.tablewrapper}>
             {
                 error ? (
                     <h2>Unable to fetch users data, please try again later</h2>
                 ) : (
-                    <table className='table'>
+                    <table className={styles.table}>
                         <thead>
                             <tr>
                                 <th><strong>ID</strong></th >
@@ -31,8 +31,8 @@ const Table = (props) => {
                                         <td>{row.email}</td>
                                         <td>{row.company['bs'].split(' ').join(', ')}</td>
                                         <td>
-                                            <button className='edit'><FaUserEdit /></button>
-                                            <button className='delete'><MdDeleteSweep /></button>
+                                            <button className={styles.edit}><FaUserEdit /></button>
+                                            <button className={styles.delete}><MdDeleteSweep /></button>
                                         </td>
                                     </tr>
                                 ))

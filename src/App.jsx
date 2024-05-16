@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
-import Navbar from "./components/Navbar"
+import Navbar from "./components/Navbar/Navbar"
+import Table from "./components/Table/Table";
 import axios from "axios";
-import Table from "./components/Table";
 
 function App() {
 

@@ -1,9 +1,9 @@
 import React from 'react'
-import '../index.css';
+import styles from './Navbar.module.css';
 
 const Navbar = () => {
   return (
-    <nav className='navbar'>
+    <nav className={styles.navbar}>
         <h1>User Management Dashboard</h1>
     </nav>
   )
