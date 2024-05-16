@@ -4,8 +4,8 @@ import { FaUserEdit } from 'react-icons/fa';
 import { MdDeleteSweep } from 'react-icons/md';
 
 const Table = (props) => {
-    const { data, error } = props;
-    console.log(data);
+    const { currentData, error, nPages, currentPage, setCurrentPage } = props;
+    
     return (
         <div className={styles.tablewrapper}>
             {
@@ -24,7 +24,7 @@ const Table = (props) => {
                         </thead >
                         <tbody>
                             {
-                                data.map((row, ind) => (
+                                currentData.map((row, ind) => (
                                     <tr>
                                         <td>{row.id}</td>
                                         <td>{row.name}</td>
