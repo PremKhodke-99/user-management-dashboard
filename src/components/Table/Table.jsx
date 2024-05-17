@@ -1,12 +1,9 @@
-import React, { useState } from 'react'
+import React from 'react'
 import styles from './Table.module.css'
-import { FaUserEdit } from 'react-icons/fa';
-import { MdDeleteSweep, MdDone } from 'react-icons/md';
+import TableRow from './TableRow';
 
-const Table = (props) => {
-    const [editActive, setEditActive] = useState(false);
-    const { currentData, error} = props;
-    
+const Table = ({ currentData, error, editHandler, deleteHandler }) => {
+
     return (
         <div className={styles.tablewrapper}>
             {
@@ -25,21 +22,13 @@ const Table = (props) => {
                         </thead >
                         <tbody>
                             {
-                                currentData.map((row, ind) => (
-                                    <tr key={ind}>
-                                        <td>{row.id}</td>
-                                        <td>{row.name}</td>
-                                        <td>{row.email}</td>
-                                        <td>{row.company['bs'].split(' ').join(', ')}</td>
-                                        <td>
-                                            <button className={styles.edit} onClick={() => setEditActive(prev => !prev)}>
-                                                {
-                                                    editActive ? <MdDone />: <FaUserEdit />
-                                                }
-                                            </button>
-                                            <button className={styles.delete}><MdDeleteSweep /></button>
-                                        </td>
-                                    </tr>
+                                currentData.map((row) => (
+                                    <TableRow
+                                        data={row}
+                                        key={row.id}
+                                        editHandler={editHandler}
+                                        deleteHandler={deleteHandler}
+                                    />
                                 ))
                             }
                         </tbody>
