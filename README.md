@@ -10,25 +10,26 @@ Data is fetch from [JSONPlaceholder](https://jsonplaceholder.typicode.com/).
 ## Screenshots
 
 ### Homepage
-![App Screenshot]('./public/screenshots/first.png')
+
+![Home](./public/screenshots/first.png)
 
 ### Pagination
-![App Screenshot]('./public/screenshots/second.png')
+![App Screenshot](./public/screenshots/second.png)
 
 ### Add user
-![App Screenshot]('./public/screenshots/third.png')
+![App Screenshot](./public/screenshots/third.png)
 
 ### User Added
-![App Screenshot]('./public/screenshots/fourth.png')
+![App Screenshot](./public/screenshots/fourth.png)
 
 ### Edit User
-![App Screenshot]('./public/screenshots/fifth.png')
+![App Screenshot](./public/screenshots/fifth.png)
 
 ### User edited
-![App Screenshot]('./public/screenshots/sixth.png')
+![App Screenshot](./public/screenshots/sixth.png)
 
 ### Delete
-![App Screenshot]('./public/screenshots/seventh.png')
+![App Screenshot](./public/screenshots/seventh.png)
 
 
 ## Features
