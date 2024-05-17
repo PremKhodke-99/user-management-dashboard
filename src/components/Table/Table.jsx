@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styles from './Table.module.css'
 import { FaUserEdit } from 'react-icons/fa';
-import { MdDeleteSweep } from 'react-icons/md';
+import { MdDeleteSweep, MdDone } from 'react-icons/md';
 
 const Table = (props) => {
-    const { currentData, error, nPages, currentPage, setCurrentPage } = props;
+    const [editActive, setEditActive] = useState(false);
+    const { currentData, error} = props;
     
     return (
         <div className={styles.tablewrapper}>
@@ -25,13 +26,17 @@ const Table = (props) => {
                         <tbody>
                             {
                                 currentData.map((row, ind) => (
-                                    <tr>
+                                    <tr key={ind}>
                                         <td>{row.id}</td>
                                         <td>{row.name}</td>
                                         <td>{row.email}</td>
                                         <td>{row.company['bs'].split(' ').join(', ')}</td>
                                         <td>
-                                            <button className={styles.edit}><FaUserEdit /></button>
+                                            <button className={styles.edit} onClick={() => setEditActive(prev => !prev)}>
+                                                {
+                                                    editActive ? <MdDone />: <FaUserEdit />
+                                                }
+                                            </button>
                                             <button className={styles.delete}><MdDeleteSweep /></button>
                                         </td>
                                     </tr>
