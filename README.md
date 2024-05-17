@@ -10,25 +10,25 @@ Data is fetch from [JSONPlaceholder](https://jsonplaceholder.typicode.com/).
 ## Screenshots
 
 ### Homepage
-![App Screenshot]('./public/screenshots/first.png')
+![App Screenshot](./public/screenshots/first.png)
 
 ### Pagination
-![App Screenshot]('./public/screenshots/second.png')
+![App Screenshot](./public/screenshots/second.png)
 
 ### Add user
-![App Screenshot]('./public/screenshots/third.png')
+![App Screenshot](./public/screenshots/third.png)
 
 ### User Added
-![App Screenshot]('./public/screenshots/fourth.png')
+![App Screenshot](./public/screenshots/fourth.png)
 
 ### Edit User
-![App Screenshot]('./public/screenshots/fifth.png')
+![App Screenshot](./public/screenshots/fifth.png)
 
 ### User edited
-![App Screenshot]('./public/screenshots/sixth.png')
+![App Screenshot](./public/screenshots/sixth.png)
 
 ### Delete
-![App Screenshot]('./public/screenshots/seventh.png')
+![App Screenshot](./public/screenshots/seventh.png)
 
 
 ## Features
@@ -37,6 +37,18 @@ Data is fetch from [JSONPlaceholder](https://jsonplaceholder.typicode.com/).
 - Add New User
 - Edit Existing User
 - Delete User
+
+## Challenges Faced during development
+
+- Sharing data as props from one component to multiple other components.
+- Managing and keeping note of every prop shared.
+- While editing every data's edit botton was change so to overcome that problem I created new component.
+
+
+## Improvements I would make if given more time.
+
+- To manage props I would have used Redux Toolkit, which would have overcome the prop-drilling problem.
+- Would have made UI more attractive by using CSS frameworks like Tailwind CSS or Material UI.
 
 ## Link
 [Click here](https://user-management-dashboard-ochre.vercel.app/)
