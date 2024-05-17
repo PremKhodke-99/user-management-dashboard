@@ -12,6 +12,10 @@ const Form = ({ data, setData, setFormActive }) => {
     }
   });
 
+  /**
+   * 
+   * handleChange function handles the changes made in input field and updates it in useState
+   */
   const handleChange = (e) => {
     const { name, value } = e.target;
 
@@ -22,6 +26,10 @@ const Form = ({ data, setData, setFormActive }) => {
     }
   }
 
+  /**
+   * 
+   * handleSubmit adds the new user into the list
+   */
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!details.name.length) {
@@ -45,6 +53,7 @@ const Form = ({ data, setData, setFormActive }) => {
       }
     });
     setFormActive(prev => !prev)
+    alert('User Added')
     console.log(details);
   }
 
