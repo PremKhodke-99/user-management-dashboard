@@ -10,6 +10,8 @@ Data is fetch from [JSONPlaceholder](https://jsonplaceholder.typicode.com/).
 ## Screenshots
 
 ### Homepage
+
+![Home](./public/screenshots/first.png)
 ![App Screenshot](./public/screenshots/first.png)
 
 ### Pagination
