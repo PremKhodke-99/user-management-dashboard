@@ -6,10 +6,16 @@ const Pagination = ({ nPages, currentPage, setCurrentPage }) => {
 
   const pageNumbers = [...Array(nPages + 1).keys()].slice(1);
 
+  /**
+   * nextPage function used to go to next page
+   */
   const nextPage = () => {
     if (currentPage !== nPages) setCurrentPage(prev => prev + 1);
   }
 
+  /**
+   * nextPage function used to go to previous page
+   */
   const prevPage = () => {
     if (currentPage !== 1) setCurrentPage(prev => prev - 1);
   }
