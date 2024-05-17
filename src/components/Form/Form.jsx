@@ -14,7 +14,12 @@ const Form = ({ data, setData, setFormActive }) => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setDetails({ ...details, [name]: value });
+
+    if (name === 'company["bs"]') {
+      setDetails({ ...details, company: { 'bs': value } });
+    } else {
+      setDetails({ ...details, [name]: value });
+    }
   }
 
   const handleSubmit = (e) => {
@@ -90,7 +95,7 @@ const Form = ({ data, setData, setFormActive }) => {
               type="text"
               id='department'
               name='company["bs"]'
-              value={details.department}
+              value={details.company['bs']}
               onChange={handleChange}
               required
               className={styles.input}
